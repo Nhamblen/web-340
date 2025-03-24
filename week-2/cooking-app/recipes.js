@@ -12,7 +12,7 @@ function createRecipe(ingredients) {
 
 // Define the setTimer function
 function setTimer(minutes) {
-  return `Timer set for ${minutes} minutes.`;
+  return `Timer set for ${minutes} minutes`;
 }
 
 // Define the quit function
