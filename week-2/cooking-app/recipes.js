@@ -1,9 +1,9 @@
 /**
- * Author:
- * Date:
- * File Name:
+ * Author: Noah Hamblen
+ * Date: 3/24/25
+ * File Name: recipes.js
  * Description:
-*/
+ */
 
 // Define the createRecipe function
 function createRecipe(ingredients) {
