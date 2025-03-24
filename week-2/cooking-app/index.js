@@ -2,9 +2,11 @@
  * Author: Noah Hamblen
  * Date: 3/24/25
  * File Name: index.js
- * Description:
+ * Description: Import testing
  */
 
-// TODO: Import your module using require
+const { createRecipe, setTimer, quit } = require("./recipes");
 
-// TODO: Implement your CLI program here
+console.log(createRecipe(["ingredient1", "ingredient2"]));
+console.log(setTimer(15));
+console.log(quit());
