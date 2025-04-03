@@ -4,7 +4,7 @@
   "description": "A module to calculate distances between planets",
   "main": "src/distance-calculator.js",
   "scripts": {
-    "test": "node test/distance-calculator.spec.js"
+    "test": "node --use-strict test/distance-calculator.spec.js"
   },
   "dependencies": {},
   "devDependencies": {}
