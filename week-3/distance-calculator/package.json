@@ -1,0 +1,12 @@
+{
+  "name": "distance-calculator",
+  "version": "1.0.0",
+  "description": "A module to calculate distances between planets",
+  "main": "src/distance-calculator.js",
+  "scripts": {
+    "test": "node test/distance-calculator.spec.js"
+  },
+  "type": "module",
+  "dependencies": {},
+  "devDependencies": {}
+}
