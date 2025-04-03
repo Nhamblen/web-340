@@ -6,7 +6,6 @@
   "scripts": {
     "test": "node test/distance-calculator.spec.js"
   },
-  "type": "module",
   "dependencies": {},
   "devDependencies": {}
 }
