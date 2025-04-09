@@ -15,7 +15,7 @@ class TacoStandEmitter extends EventEmitter {
   }
 
   prepareTaco(taco) {
-    this.emit("prepare", customer);
+    this.emit("prepare", taco);
   }
 
   handleRush(rush) {
