@@ -1,8 +1,8 @@
 /**
- * Author:
- * Date:
- * File Name:
- * Description:
+ * Author: Noah Hamblen
+ * Date: 4/9/25
+ * File Name: index.js
+ * Description: Main js file
  */
 
 "use strict";
@@ -14,7 +14,7 @@ const tacoStand = new TacoStandEmitter();
 
 const rl = readline.createInterface({
   input: process.stdin,
-  output: process.stdout
+  output: process.stdout,
 });
 
 // TODO: Set up event listeners for the tacoStand object
@@ -24,4 +24,6 @@ rl.on("line", (input) => {
   // TODO: Handle the commands
 });
 
-console.log(`Enter a command: "serve", "prepare", or "rush", followed by a space and the argument.`);
+console.log(
+  `Enter a command: "serve", "prepare", or "rush", followed by a space and the argument.`
+);

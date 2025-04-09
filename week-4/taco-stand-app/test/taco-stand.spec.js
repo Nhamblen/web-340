@@ -1,8 +1,8 @@
 /**
- * Author:
- * Date:
- * File Name:
- * Description:
+ * Author: Noah Hamblen
+ * Date: 4/9/25
+ * File Name: taco-stand.spec.js
+ * Description: Tests for the TacoStandEmitter methods
  */
 
 "use strict";
