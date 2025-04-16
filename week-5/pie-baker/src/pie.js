@@ -7,7 +7,7 @@
 "use strict";
 
 function bakePie(pieType, ingredients) {
-  // Your code here
+  let essentialIngredients = [flour, sugar, butter];
 }
 
 module.exports = { bakePie };
