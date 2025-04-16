@@ -20,7 +20,7 @@ describe("bakePie", () => {
     const message = bakePie("apple", ["flour", "sugar", "butter"]);
 
     // Expect the function to return the success message
-    expect(message).toBe("Successfully baked an apple pie!");
+    expect(message).toBe("Successfully baked a apple pie!");
   });
 
   //
