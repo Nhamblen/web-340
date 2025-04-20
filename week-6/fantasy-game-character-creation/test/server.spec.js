@@ -4,6 +4,8 @@ Noah Hamblen
 server.spec.js
 */
 
+"use strict";
+
 // Module Imports
 const http = require("http");
 const server = require("../src/server");

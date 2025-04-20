@@ -4,6 +4,8 @@ Noah Hamblen
 server.js
 */
 
+"use strict";
+
 // Module Imports
 const http = require("http");
 const url = require("url");
