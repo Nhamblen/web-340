@@ -1,5 +1,11 @@
-const http = require('http');
-const url = require('url');
+/*
+Noah Hamblen
+4/20/25
+server.js
+*/
+
+const http = require("http");
+const url = require("url");
 
 // TODO: Implement your server here
 
@@ -8,7 +14,7 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(3000, () => {
-  console.log('Server listening on port 3000');
+  console.log("Server listening on port 3000");
 });
 
 module.exports = server;
