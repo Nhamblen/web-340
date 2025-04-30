@@ -1,6 +1,6 @@
-const CharacterCreator = require('../src/character-creator');
+const CharacterCreator = require("../src/character-creator");
 
-describe('CharacterCreator', () => {
+describe("CharacterCreator", () => {
   let characterCreator;
 
   beforeEach(() => {
@@ -8,7 +8,19 @@ describe('CharacterCreator', () => {
   });
 
   test("should process data correctly when written to", (done) => {
-    // TODO: Write your test here
+    let result = "";
+
+    characterCreator.on("data", (chunk) => {
+      result += chunk.toString();
+    });
+
+    characterCreator.on("end", () => {
+      expect(result).toBe("You created a Male Warrior who loves cats.");
+      done();
+    });
+
+    characterCreator.write("Warrior,Male,loves cats");
+    characterCreator.end();
   });
 
   test("should emit 'error' when invalid data is written", (done) => {
