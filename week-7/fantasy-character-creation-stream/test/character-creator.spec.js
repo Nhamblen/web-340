@@ -20,11 +20,16 @@ describe("CharacterCreator", () => {
     });
 
     characterCreator.write("Warrior,Male,loves cats");
-    characterCreator.end();
   });
 
   test("should emit 'error' when invalid data is written", (done) => {
-    // TODO: Write your test here
+    characterCreator.on("error", (err) => {
+      expect(err).toBeInstanceOf(Error);
+      expect(err.message).toBe("Input can't be empty");
+      done();
+    });
+
+    characterCreator.write("");
   });
 
   test("should transform data correctly when written to", (done) => {
