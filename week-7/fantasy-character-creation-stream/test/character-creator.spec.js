@@ -25,6 +25,8 @@ describe("CharacterCreator", () => {
 
     // Write valid input
     characterCreator.write("Warrior,Male,loves cats");
+
+    characterCreator.end();
   });
 
   // Test 2: Check that an error is emitted for invalid input (empty string)
@@ -57,5 +59,7 @@ describe("CharacterCreator", () => {
 
     // Write valid input
     characterCreator.write("Warrior,Female,is blind");
+
+    characterCreator.end();
   });
 });
