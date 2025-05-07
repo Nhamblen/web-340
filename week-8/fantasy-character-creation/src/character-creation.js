@@ -14,7 +14,7 @@
  * 3. Uncomment the 'module.exports' line under the "For promises" comment.
  */
 
-// For promises:
+// Import modules for promises
 const fs = require("fs").promises;
 const path = require("path");
 
@@ -22,13 +22,18 @@ const path = require("path");
 const filePath = path.join(__dirname, "characters.json");
 
 async function createCharacter(filePath, character) {
+  // Convert the character object into a JSON string with indentation for readability.
   const data = JSON.stringify(character, null, 2);
+  // Write the JSON data to the specified file using UTF-8 encoding.
   await fs.writeFile(filePath, data, "utf-8");
 }
 
 async function getCharacters(filePath, character) {
+  // Read the contents of the file using UTF-8 encoding.
   const data = await fs.readFile(filePath, "utf-8");
+  // Parse the JSON string into a JavaScript object and return it.
   return JSON.parse(data);
 }
 
+// Export the functions so they can be used in other modules
 module.exports = { createCharacter, getCharacters }; // For promises
