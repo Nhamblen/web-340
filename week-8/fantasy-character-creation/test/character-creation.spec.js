@@ -45,7 +45,19 @@ describe("Character Creation Module", () => {
     const parsed = JSON.parse(data);
     expect(parsed).toEqual(character);
   });
+
+  // Test: getCharacters reads characters from the file
+  test("Read character data from a file", async () => {
+    const character = {
+      class: "Rogue",
+      gender: "Female",
+      funFact: "Has 3 arms",
+    };
+
+    await fs.writeFile(filePath, JSON.stringify(character), "utf-8");
+    const result = await getCharacters(filePath);
+    expect(result).toEqual(character);
+  });
 });
 
-// 2. Test that getCharacters reads characters from the file
 // 3. Test that createCharacter handles errors when writing to the file
