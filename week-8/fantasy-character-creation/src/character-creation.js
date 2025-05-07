@@ -26,6 +26,9 @@ async function createCharacter(filePath, character) {
   await fs.writeFile(filePath, data, "utf-8");
 }
 
-async function getCharacters() {}
+async function getCharacters(filePath, character) {
+  const data = await fs.readFile(filePath, "utf-8");
+  return JSON.parse(data);
+}
 
 module.exports = { createCharacter, getCharacters }; // For promises
