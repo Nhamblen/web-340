@@ -14,33 +14,18 @@
  * 3. Uncomment the 'module.exports' line under the "For promises" comment.
  */
 
-// For callbacks:
-/*
-const fs = require('fs');
-
-function createCharacter(character, callback) {
-  // TODO: Implement this function
-}
-
-function getCharacters(callback) {
-  // TODO: Implement this function
-}
-*/
-
 // For promises:
-/*
-const fs = require('fs').promises;
+const fs = require("fs").promises;
+const path = require("path");
 
-async function createCharacter(character) {
-  // TODO: Implement this function
+// Path for storing character data
+const filePath = path.join(__dirname, "characters.json");
+
+async function createCharacter(filePath, character) {
+  const data = JSON.stringify(character, null, 2);
+  await fs.writeFile(filePath, data, "utf-8");
 }
 
-async function getCharacters() {
-  // TODO: Implement this function
-}
-*/
+async function getCharacters() {}
 
-// Uncomment the appropriate exports depending on whether you're using callbacks or promises:
-
-// module.exports = { createCharacter, getCharacters }; // For callbacks
-// module.exports = { createCharacter, getCharacters }; // For promises
+module.exports = { createCharacter, getCharacters }; // For promises
