@@ -27,6 +27,11 @@ describe("GameCharacters", () => {
   });
 
   test("should handle an error when the game characters data script fails", (done) => {
-    // TODO: Implement this test
+    const failing = new GameCharacters("../src/failing-script.js");
+    failing.getCharacters((err, data) => {
+      expect(err).toBeTruthy();
+      expect(data).toBeNull();
+      done();
+    });
   });
 });
