@@ -18,7 +18,12 @@ describe("GameCharacters", () => {
   });
 
   test("should handle an error when the game characters data script is not found", (done) => {
-    // TODO: Implement this test
+    const broken = new GameCharacters("./nonexistent.js");
+    broken.getCharacters((err, data) => {
+      expect(err).toBeTruthy();
+      expect(data).toBeNull();
+      done();
+    });
   });
 
   test("should handle an error when the game characters data script fails", (done) => {
